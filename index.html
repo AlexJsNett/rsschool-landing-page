@@ -19,8 +19,8 @@
     <header class="header">
       <div class="container header__inner">
         <a class="logo" href="index.html">
-          <span class="logo__name">Resource</span>
-          <span class="logo__caption">Coffee House</span>
+          <img class="logo__mark logo__mark--light" src="assets/images/logo-light.webp" alt="Resource Coffee House" width="120" height="40" />
+          <img class="logo__mark logo__mark--dark" src="assets/images/logo-dark.webp" alt="Resource Coffee House" width="120" height="40" hidden />
         </a>
 
         <nav class="nav" aria-label="Primary" id="primary-nav">
@@ -100,7 +100,7 @@
             </button>
 
             <ul class="slider__track" data-slider-track>
-              <li class="slider__slide" data-slider-slide>
+              <li class="slider__slide is-active" data-slider-slide>
                 <img src="assets/images/drink-smores-frappuccino.webp" alt="S'mores Frappuccino" width="600" height="600" />
                 <h3>S'mores Frappuccino</h3>
                 <p>
@@ -108,6 +108,24 @@
                   sugar and cinnamon before being topped with oat milk.
                 </p>
                 <span class="price">$5.50</span>
+              </li>
+              <li class="slider__slide" data-slider-slide hidden>
+                <img src="assets/images/latte-macchiato.webp" alt="Caramel Macchiato" width="600" height="600" />
+                <h3>Caramel Macchiato</h3>
+                <p>
+                  Fragrant and unique classic espresso with rich
+                  caramel-peanut syrup, with cream under whipped thick foam.
+                </p>
+                <span class="price">$5.00</span>
+              </li>
+              <li class="slider__slide" data-slider-slide hidden>
+                <img src="assets/images/ice-cappuccino.webp" alt="Ice coffee" width="600" height="600" />
+                <h3>Ice coffee</h3>
+                <p>
+                  A popular summer drink that tones and invigorates.
+                  Prepared from coffee, milk and ice.
+                </p>
+                <span class="price">$4.50</span>
               </li>
             </ul>
 
