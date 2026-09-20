@@ -139,11 +139,6 @@ main > section {
   color: var(--color-text-inverse);
 }
 
-.button img {
-  width: 16px;
-  height: 16px;
-}
-
 /* ---------- header ---------- */
 
 .header {
@@ -171,28 +166,29 @@ main > section {
 
 .nav__list {
   display: flex;
-  gap: 32px;
+  gap: 40px;
 }
 
 .header__actions {
   display: flex;
   align-items: center;
-  gap: 16px;
+  gap: 24px;
 }
 
 .theme-toggle {
   display: inline-flex;
   align-items: center;
-  gap: 4px;
-  padding: 6px;
+  gap: 8px;
+  padding: 3px;
+  border: 1px solid var(--color-border-primary);
   border-radius: 999px;
-  background: var(--color-border-primary);
+  box-sizing: border-box;
 }
 
 .theme-toggle button {
   display: inline-flex;
-  width: 32px;
-  height: 32px;
+  width: 36px;
+  height: 36px;
   border-radius: 50%;
 }
 
@@ -286,7 +282,11 @@ main > section {
 
 .hero {
   position: relative;
-  margin-inline: var(--gutter);
+  width: min(
+    calc(100% - 2 * var(--gutter)),
+    calc(var(--container-width) - 2 * var(--gutter))
+  );
+  margin-inline: auto;
   margin-top: 20px;
   padding-top: 0;
   border-radius: var(--radius-lg);
@@ -474,7 +474,12 @@ main > section {
   background: var(--color-bg-container);
   color: var(--color-text-inverse);
   border-radius: var(--radius-lg);
-  margin: var(--gutter);
+  width: min(
+    calc(100% - 2 * var(--gutter)),
+    calc(var(--container-width) - 2 * var(--gutter))
+  );
+  margin-inline: auto;
+  margin-block: var(--gutter);
 }
 
 .footer h2 {
