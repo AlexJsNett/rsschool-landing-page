@@ -555,11 +555,12 @@ main > section + section {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 48px;
+  gap: 40px;
 }
 
 .app__content {
-  max-width: 480px;
+  max-width: 600px;
+  flex-shrink: 0;
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -567,27 +568,66 @@ main > section + section {
 
 .app__badges {
   display: flex;
-  gap: 16px;
+  gap: 20px;
 }
 
 .badge {
   display: inline-flex;
   align-items: center;
-  gap: 10px;
-  padding: 10px 20px;
+  gap: 8px;
+  width: 200px;
+  height: 64px;
+  padding-left: 20px;
   border-radius: 999px;
   border: 1px solid var(--color-border-primary);
-  transition: background var(--transition), color var(--transition);
+  cursor: pointer;
+  transition:
+    background var(--transition),
+    color var(--transition),
+    border-color var(--transition);
+}
+
+.badge__icon {
+  position: relative;
+  display: inline-flex;
+  flex-shrink: 0;
+  width: 36px;
+  height: 36px;
+  cursor: pointer;
+}
+
+.badge__text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.badge__caption {
+  font-size: var(--fs-caption);
+  line-height: var(--lh-caption);
+  font-weight: 600;
+}
+
+.badge__title {
+  font-size: var(--fs-body);
+  line-height: var(--lh-body);
+  font-weight: 600;
 }
 
 .badge:hover {
   background: var(--color-bg-container);
   color: var(--color-text-inverse);
+  border-color: var(--color-bg-container);
 }
 
 .app__image {
-  max-width: 420px;
-  width: 100%;
+  width: 630px;
+  min-width: 0;
+  max-width: 100%;
+  aspect-ratio: 1 / 1;
+  height: auto;
+  object-fit: cover;
+  flex-shrink: 1;
 }
 
 /* ---------- footer ---------- */
@@ -610,9 +650,9 @@ main > section + section {
 
 .footer__inner {
   display: flex;
-  justify-content: space-between;
-  gap: 48px;
+  gap: 100px;
   padding-block: var(--section-gap);
+  padding-inline: 100px;
 }
 
 .footer__brand {
@@ -623,29 +663,35 @@ main > section + section {
 
 .socials {
   display: flex;
-  gap: 12px;
+  gap: 13px;
 }
 
 .socials a {
+  position: relative;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 36px;
-  height: 36px;
+  width: 59px;
+  height: 59px;
   border-radius: 50%;
-  border: 1px solid var(--color-text-inverse);
-  color: var(--color-text-inverse);
+  overflow: hidden;
+  cursor: pointer;
+  transition: background var(--transition);
+}
+
+.socials a:hover {
+  background: var(--color-text-inverse);
 }
 
 .footer__contacts h3 {
   color: var(--color-text-inverse);
-  margin-bottom: 20px;
+  margin-bottom: 40px;
 }
 
 .footer__contacts address ul {
   display: flex;
   flex-direction: column;
-  gap: 14px;
+  gap: 20px;
 }
 
 .footer__contacts li,
@@ -653,6 +699,18 @@ main > section + section {
   display: flex;
   align-items: center;
   gap: 10px;
+}
+
+.footer__contacts a {
+  width: fit-content;
+  padding-bottom: 4px;
+  border-bottom: 2px solid transparent;
+  cursor: pointer;
+  transition: border-color var(--transition);
+}
+
+.footer__contacts a:hover {
+  border-bottom-color: currentColor;
 }
 
 /* ---------- catalog ---------- */
@@ -681,10 +739,13 @@ main > section + section {
   border: 1px solid var(--color-border-primary);
   background: transparent;
   color: var(--color-text-primary);
-  transition: background var(--transition), color var(--transition);
+  transition:
+    background var(--transition),
+    color var(--transition);
 }
 
-.category.is-active {
+.category.is-active,
+.category:hover {
   background: var(--color-bg-container);
   color: var(--color-text-inverse);
   border-color: var(--color-bg-container);
