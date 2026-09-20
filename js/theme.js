@@ -9,11 +9,8 @@ function getPreferredTheme() {
 function applyTheme(theme) {
   document.documentElement.setAttribute("data-theme", theme);
 
-  document.querySelectorAll(".logo__mark--light").forEach((el) => {
-    el.hidden = theme === "dark";
-  });
-  document.querySelectorAll(".logo__mark--dark").forEach((el) => {
-    el.hidden = theme !== "dark";
+  document.querySelectorAll("[data-theme-variant]").forEach((el) => {
+    el.hidden = el.dataset.themeVariant !== theme;
   });
 }
 
