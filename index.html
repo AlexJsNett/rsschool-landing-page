@@ -52,19 +52,20 @@
               data-theme-set="light"
               aria-label="Light theme"
             >
-              <img src="assets/icons/sun-light-icon.svg" alt="" data-theme-variant="light" />
-              <img src="assets/icons/sun-dark-icon.svg" alt="" data-theme-variant="dark" hidden />
+              <img src="assets/icons/sun-light-icon.svg" alt="Light theme icon" data-theme-variant="light" />
+              <img src="assets/icons/sun-dark-icon.svg" alt="Light theme icon" data-theme-variant="dark" hidden />
             </button>
             <button type="button" data-theme-set="dark" aria-label="Dark theme">
-              <img src="assets/icons/moon-light-icon.svg" alt="" data-theme-variant="light" />
-              <img src="assets/icons/moon-dark-icon.svg" alt="" data-theme-variant="dark" hidden />
+              <img src="assets/icons/moon-light-icon.svg" alt="Dark theme icon" data-theme-variant="light" class="icon-base" />
+              <img src="assets/icons/moon-light-hover-icon.svg" alt="Dark theme icon" data-theme-variant="light" class="icon-hover" />
+              <img src="assets/icons/moon-dark-icon.svg" alt="Dark theme icon" data-theme-variant="dark" hidden />
             </button>
           </div>
 
           <a class="menu-link" href="catalog.html">
             Menu
-            <img src="assets/icons/coffee-cup-light-icon.svg" alt="" data-theme-variant="light" />
-            <img src="assets/icons/coffee-cup-dark-icon.svg" alt="" data-theme-variant="dark" hidden />
+            <img src="assets/icons/coffee-cup-light-icon.svg" alt="Menu icon" data-theme-variant="light" />
+            <img src="assets/icons/coffee-cup-dark-icon.svg" alt="Menu icon" data-theme-variant="dark" hidden />
           </a>
 
           <button
@@ -80,10 +81,11 @@
               height="22"
               viewBox="0 0 24 24"
               fill="none"
-              stroke="currentColor"
+              stroke="#665F55"
               stroke-width="2"
+              stroke-linecap="round"
             >
-              <path d="M3 6h18M3 12h18M3 18h18" />
+              <path d="M3 9h18M3 15h18" />
             </svg>
           </button>
         </div>
@@ -115,14 +117,24 @@
         </ul>
         <a class="menu-link menu-link--mobile" href="catalog.html">
           Menu
-          <img src="assets/icons/coffee-cup-light-icon.svg" alt="" data-theme-variant="light" />
-          <img src="assets/icons/coffee-cup-dark-icon.svg" alt="" data-theme-variant="dark" hidden />
+          <img src="assets/icons/coffee-cup-light-icon.svg" alt="Menu icon" data-theme-variant="light" />
+          <img src="assets/icons/coffee-cup-dark-icon.svg" alt="Menu icon" data-theme-variant="dark" hidden />
         </a>
       </nav>
     </header>
 
     <main>
       <section class="hero" id="hero">
+        <video
+          class="hero__video"
+          poster="assets/images/hero-poster.webp"
+          autoplay
+          muted
+          loop
+          playsinline
+        >
+          <source src="assets/videos/hero.mp4" type="video/mp4" />
+        </video>
         <div class="hero__content">
           <h1><em>Enjoy</em> premium coffee at our charming cafe</h1>
           <p>
@@ -131,7 +143,16 @@
             and those seeking a warm and inviting space to enjoy their
             favorite beverage.
           </p>
-          <a class="button" href="catalog.html">Menu</a>
+          <a class="button" href="catalog.html">
+            <span class="button__label">
+              Menu
+              <img
+                class="button__icon"
+                src="assets/icons/coffee-cup-light-icon.svg"
+                alt="Menu icon"
+              />
+            </span>
+          </a>
         </div>
       </section>
 
@@ -147,14 +168,15 @@
               data-slider-prev
             >
               <svg
-                width="18"
-                height="18"
-                viewBox="0 0 24 24"
+                width="14"
+                height="13"
+                viewBox="0 0 14 13"
                 fill="none"
                 stroke="currentColor"
-                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
               >
-                <path d="M15 6l-6 6 6 6" />
+                <path d="M13 6.5H0.5M6.5 12.5L0.5 6.5L6.5 0.5" />
               </svg>
             </button>
 
@@ -166,12 +188,14 @@
                   width="600"
                   height="600"
                 />
-                <h3>S'mores Frappuccino</h3>
-                <p>
-                  This new drink takes an espresso and mixes it with brown sugar
-                  and cinnamon before being topped with oat milk.
-                </p>
-                <span class="price">$5.50</span>
+                <div class="slider__slide-content">
+                  <h3>S'mores Frappuccino</h3>
+                  <p>
+                    This new drink takes an espresso and mixes it with brown
+                    sugar and cinnamon before being topped with oat milk.
+                  </p>
+                  <span class="price">$5.50</span>
+                </div>
               </li>
               <li class="slider__slide" data-slider-slide hidden>
                 <img
@@ -180,12 +204,14 @@
                   width="600"
                   height="600"
                 />
-                <h3>Caramel Macchiato</h3>
-                <p>
-                  Fragrant and unique classic espresso with rich caramel-peanut
-                  syrup, with cream under whipped thick foam.
-                </p>
-                <span class="price">$5.00</span>
+                <div class="slider__slide-content">
+                  <h3>Caramel Macchiato</h3>
+                  <p>
+                    Fragrant and unique classic espresso with rich
+                    caramel-peanut syrup, with cream under whipped thick foam.
+                  </p>
+                  <span class="price">$5.00</span>
+                </div>
               </li>
               <li class="slider__slide" data-slider-slide hidden>
                 <img
@@ -194,12 +220,14 @@
                   width="600"
                   height="600"
                 />
-                <h3>Ice coffee</h3>
-                <p>
-                  A popular summer drink that tones and invigorates. Prepared
-                  from coffee, milk and ice.
-                </p>
-                <span class="price">$4.50</span>
+                <div class="slider__slide-content">
+                  <h3>Ice coffee</h3>
+                  <p>
+                    A popular summer drink that tones and invigorates.
+                    Prepared from coffee, milk and ice.
+                  </p>
+                  <span class="price">$4.50</span>
+                </div>
               </li>
             </ul>
 
@@ -210,14 +238,16 @@
               data-slider-next
             >
               <svg
-                width="18"
-                height="18"
-                viewBox="0 0 24 24"
+                width="14"
+                height="13"
+                viewBox="0 0 14 13"
                 fill="none"
                 stroke="currentColor"
-                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                style="transform: scaleX(-1)"
               >
-                <path d="M9 6l6 6-6 6" />
+                <path d="M13 6.5H0.5M6.5 12.5L0.5 6.5L6.5 0.5" />
               </svg>
             </button>
           </div>
@@ -232,41 +262,45 @@
 
       <section class="about" id="about">
         <div class="container about__inner">
-          <p class="about__lead">
+          <h2 class="about__lead">
             Resource is <em>the perfect and cozy place</em> where you can enjoy
             a variety of hot beverages, relax, catch up with friends, or get
             some work done.
-          </p>
+          </h2>
 
           <div class="about__gallery">
-            <img
-              src="assets/images/about-1.webp"
-              alt="Guest enjoying coffee at a cafe table"
-              class="about__image about__image--1"
-              width="600"
-              height="600"
-            />
-            <img
-              src="assets/images/about-2.webp"
-              alt="Guest working with a laptop and coffee"
-              class="about__image about__image--2"
-              width="600"
-              height="600"
-            />
-            <img
-              src="assets/images/about-3.webp"
-              alt="Cozy table with candles and a cup of coffee"
-              class="about__image about__image--3"
-              width="600"
-              height="600"
-            />
-            <img
-              src="assets/images/about-4.webp"
-              alt="Couple enjoying coffee together"
-              class="about__image about__image--4"
-              width="600"
-              height="600"
-            />
+            <div class="about__col">
+              <div
+                class="about__frame about__frame--1"
+                role="img"
+                aria-label="Guest enjoying coffee at a cafe table"
+              >
+                <div class="about__frame-photo"></div>
+              </div>
+              <div
+                class="about__frame about__frame--3"
+                role="img"
+                aria-label="Cozy table with candles and a cup of coffee"
+              >
+                <div class="about__frame-photo"></div>
+              </div>
+            </div>
+            <div class="about__col">
+              <div
+                class="about__frame about__frame--2"
+                role="img"
+                aria-label="Guest working with a laptop and coffee"
+              >
+                <div class="about__frame-photo"></div>
+              </div>
+              <div
+                class="about__frame about__frame--4"
+                role="img"
+                aria-label="Couple enjoying coffee together"
+              >
+                <div class="about__frame-photo"></div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
