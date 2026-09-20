@@ -59,6 +59,7 @@ h1 {
   font-size: var(--fs-h1);
   line-height: var(--lh-h1);
   font-weight: 600;
+  letter-spacing: 0;
 }
 
 h2 {
@@ -121,8 +122,10 @@ main > section {
 .button {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 8px;
-  padding: 14px 24px;
+  width: 200px;
+  height: 64px;
   border-radius: 999px;
   /* fixed light chip: this sits on a photo, not the page background,
      so it must not flip with the site theme */
