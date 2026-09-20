@@ -180,7 +180,8 @@ main > section {
   cursor: pointer;
 }
 
-.theme-toggle button[data-theme-set="light"] {
+:root[data-theme="light"] .theme-toggle button[data-theme-set="light"],
+:root[data-theme="dark"] .theme-toggle button[data-theme-set="dark"] {
   background: var(--color-text-inverse);
 }
 
