@@ -145,6 +145,7 @@ main > section {
 
 .header {
   position: relative;
+  padding-top: 20px;
 }
 
 .header__inner {
@@ -152,7 +153,7 @@ main > section {
   align-items: center;
   justify-content: space-between;
   gap: 24px;
-  padding-block: 20px;
+  height: 60px;
 }
 
 .logo {
@@ -283,6 +284,8 @@ main > section {
 .hero {
   position: relative;
   margin-inline: var(--gutter);
+  margin-top: 20px;
+  padding-top: 0;
   border-radius: var(--radius-lg);
   overflow: hidden;
   min-height: 560px;
