@@ -50,22 +50,24 @@
   --fs-burger-link: 32px;
   --lh-burger-link: 125%;
 
-  --section-gap: 120px;
+  --section-gap: 100px;
 }
 
 @media (max-width: 1023px) {
   :root {
-    --fs-h1: 42px;
-    --lh-h1: 115%;
-    --fs-h2: 32px;
+    --fs-h1: 60px;
+    --lh-h1: 125%;
+    --fs-h2: 60px;
     --lh-h2: 125%;
     --section-gap: 72px;
   }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 500px) {
   :root {
     --gutter: 16px;
-    --section-gap: 56px;
+    --fs-h1: 42px;
+    --fs-h2: 32px;
+    --section-gap: 60px;
   }
 }
