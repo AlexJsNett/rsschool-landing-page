@@ -2,6 +2,8 @@
 
 Adaptive two-page landing built with semantic HTML, CSS and vanilla JavaScript.
 
+Live demo: https://alexjsnett.github.io/rsschool-landing-page/
+
 - Part 1: markup, responsive layout, light/dark theme — branch `landing-page`
 - Part 2: interactivity (burger menu, slider, catalog, modal) — branch `landing-page-part-2`
 
