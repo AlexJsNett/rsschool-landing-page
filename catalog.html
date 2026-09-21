@@ -12,6 +12,7 @@
     />
     <link rel="stylesheet" href="css/variables.css" />
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="preload" as="image" href="assets/images/irish-coffee.webp" fetchpriority="high" />
     <script src="js/theme.js" defer></script>
   </head>
   <body>
@@ -81,21 +82,22 @@
           <h1>Behind each of our cups hides an <em>amazing surprise</em></h1>
 
           <div class="catalog__categories" role="tablist" aria-label="Menu categories">
-            <button type="button" class="category is-active" data-category-btn="coffee" role="tab" aria-selected="true">
+            <button type="button" id="tab-coffee" class="category is-active" data-category-btn="coffee" role="tab" aria-selected="true" aria-controls="panel-coffee">
               <span class="category__icon" aria-hidden="true">☕</span>
               Coffee
             </button>
-            <button type="button" class="category" data-category-btn="tea" role="tab" aria-selected="false">
+            <button type="button" id="tab-tea" class="category" data-category-btn="tea" role="tab" aria-selected="false" aria-controls="panel-tea">
               <span class="category__icon" aria-hidden="true">🫖</span>
               Tea
             </button>
-            <button type="button" class="category" data-category-btn="dessert" role="tab" aria-selected="false">
+            <button type="button" id="tab-dessert" class="category" data-category-btn="dessert" role="tab" aria-selected="false" aria-controls="panel-dessert">
               <span class="category__icon" aria-hidden="true">🍰</span>
               Dessert
             </button>
           </div>
 
-          <ul class="catalog__grid" data-category-panel="coffee">
+          <h2 class="sr-only">Coffee menu</h2>
+          <ul class="catalog__grid" id="panel-coffee" role="tabpanel" aria-labelledby="tab-coffee" data-category-panel="coffee">
             <li class="card">
               <div class="card__photo">
                 <img src="assets/images/irish-coffee.webp" alt="Irish coffee" width="600" height="600" />
@@ -170,7 +172,8 @@
             </li>
           </ul>
 
-          <ul class="catalog__grid" data-category-panel="tea" hidden>
+          <h2 class="sr-only">Tea menu</h2>
+          <ul class="catalog__grid" id="panel-tea" role="tabpanel" aria-labelledby="tab-tea" data-category-panel="tea" hidden>
             <li class="card">
               <div class="card__photo">
                 <img src="assets/images/moroccan-tea.webp" alt="Moroccan" width="600" height="600" />
@@ -209,7 +212,8 @@
             </li>
           </ul>
 
-          <ul class="catalog__grid" data-category-panel="dessert" hidden>
+          <h2 class="sr-only">Dessert menu</h2>
+          <ul class="catalog__grid" id="panel-dessert" role="tabpanel" aria-labelledby="tab-dessert" data-category-panel="dessert" hidden>
             <li class="card">
               <div class="card__photo">
                 <img src="assets/images/marble-cheesecake.webp" alt="Marble cheesecake" width="600" height="600" />

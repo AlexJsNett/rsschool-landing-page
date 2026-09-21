@@ -805,7 +805,8 @@ main > section + section {
   color: var(--color-text-primary);
 }
 
-.card__details {
+.card__details,
+.sr-only {
   position: absolute;
   width: 1px;
   height: 1px;
