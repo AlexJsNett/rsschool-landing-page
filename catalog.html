@@ -97,7 +97,8 @@
           </div>
 
           <h2 class="sr-only">Coffee menu</h2>
-          <ul class="catalog__grid" id="panel-coffee" role="tabpanel" aria-labelledby="tab-coffee" data-category-panel="coffee">
+          <div id="panel-coffee" role="tabpanel" aria-labelledby="tab-coffee">
+          <ul class="catalog__grid" data-category-panel="coffee">
             <li class="card">
               <div class="card__photo">
                 <img src="assets/images/irish-coffee.webp" alt="Irish coffee" width="600" height="600" />
@@ -171,9 +172,11 @@
               <button type="button" class="card__details" data-modal-trigger data-title="Coffee with cognac" data-desc="Fragrant black coffee with cognac and whipped cream" data-image="assets/images/coffee-with-cognac.webp" data-price="6.50" data-unit="ml" data-sizes="200,300,400" data-additives="Sugar,Cinnamon,Syrup">Details</button>
             </li>
           </ul>
+          </div>
 
           <h2 class="sr-only">Tea menu</h2>
-          <ul class="catalog__grid" id="panel-tea" role="tabpanel" aria-labelledby="tab-tea" data-category-panel="tea" hidden>
+          <div id="panel-tea" role="tabpanel" aria-labelledby="tab-tea" hidden>
+          <ul class="catalog__grid" data-category-panel="tea">
             <li class="card">
               <div class="card__photo">
                 <img src="assets/images/moroccan-tea.webp" alt="Moroccan" width="600" height="600" />
@@ -211,9 +214,11 @@
               <button type="button" class="card__details" data-modal-trigger data-title="Sea buckthorn" data-desc="Toning sweet black tea with sea buckthorn, fresh thyme and cinnamon" data-image="assets/images/sea-buckthorn-tea.webp" data-price="5.50" data-unit="ml" data-sizes="200,300,400" data-additives="Sugar,Lemon,Syrup">Details</button>
             </li>
           </ul>
+          </div>
 
           <h2 class="sr-only">Dessert menu</h2>
-          <ul class="catalog__grid" id="panel-dessert" role="tabpanel" aria-labelledby="tab-dessert" data-category-panel="dessert" hidden>
+          <div id="panel-dessert" role="tabpanel" aria-labelledby="tab-dessert" hidden>
+          <ul class="catalog__grid" data-category-panel="dessert">
             <li class="card">
               <div class="card__photo">
                 <img src="assets/images/marble-cheesecake.webp" alt="Marble cheesecake" width="600" height="600" />
@@ -287,6 +292,7 @@
               <button type="button" class="card__details" data-modal-trigger data-title="Black forest" data-desc="A combination of thin sponge cake with cherry jam and light chocolate mousse" data-image="assets/images/black-forest.webp" data-price="6.50" data-unit="g" data-sizes="50,100,200" data-additives="Berries,Nuts,Jam">Details</button>
             </li>
           </ul>
+          </div>
 
           <button type="button" class="show-more" data-show-more="coffee" aria-label="Show more coffee">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M21.8883 13.5C21.1645 18.3113 17.013 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C16.1006 2 19.6248 4.46819 21.1679 8" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" /><path d="M17 8H21.4C21.7314 8 22 7.73137 22 7.4V3" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" /></svg>
