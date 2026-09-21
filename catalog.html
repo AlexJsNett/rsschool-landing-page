@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Resource Coffee House — Menu</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,600;1,600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/variables.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="preload" as="image" href="assets/images/irish-coffee.webp" fetchpriority="high" />
+    <script src="js/theme.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#catalog">Skip to content</a>
+
+    <header class="header">
+      <div class="container header__inner">
+        <a class="logo" href="index.html">
+          <img class="logo__mark" src="assets/images/logo-light.svg" alt="Resource Coffee House" width="100" height="60" data-theme-variant="light" />
+          <img class="logo__mark" src="assets/images/logo-dark.svg" alt="Resource Coffee House" width="100" height="60" data-theme-variant="dark" hidden />
+        </a>
+
+        <nav class="nav" aria-label="Primary" id="primary-nav">
+          <ul class="nav__list">
+            <li><a href="index.html#slider">Favorite coffee</a></li>
+            <li><a href="index.html#about">About</a></li>
+            <li><a href="index.html#app">Mobile app</a></li>
+            <li><a href="index.html#contacts">Contact us</a></li>
+          </ul>
+        </nav>
+
+        <div class="header__actions">
+          <div class="theme-toggle" role="group" aria-label="Color theme">
+            <button type="button" data-theme-set="light" aria-label="Light theme">
+              <img src="assets/icons/sun-light-icon.svg" alt="Light theme icon" data-theme-variant="light" />
+              <img src="assets/icons/sun-dark-icon.svg" alt="Light theme icon" data-theme-variant="dark" hidden />
+            </button>
+            <button type="button" data-theme-set="dark" aria-label="Dark theme">
+              <svg width="36" height="36" viewBox="0 0 36 36" fill="currentColor" data-theme-variant="light"><path d="M18 9C13.03 9 9 13.03 9 18C9 22.97 13.03 27 18 27C22.97 27 27 22.97 27 18C27 17.54 26.96 17.08 26.9 16.64C25.92 18.01 24.32 18.9 22.5 18.9C19.52 18.9 17.1 16.48 17.1 13.5C17.1 11.69 17.99 10.08 19.36 9.1C18.92 9.04 18.46 9 18 9Z"/></svg>
+              <img src="assets/icons/moon-dark-icon.svg" alt="Dark theme icon" data-theme-variant="dark" hidden />
+            </button>
+          </div>
+
+          <a class="menu-link is-current" href="catalog.html" aria-current="page">
+            Menu
+            <img src="assets/icons/coffee-cup-light-icon.svg" alt="Menu icon" data-theme-variant="light" />
+            <img src="assets/icons/coffee-cup-dark-icon.svg" alt="Menu icon" data-theme-variant="dark" hidden />
+          </a>
+
+          <button class="burger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-nav" data-burger-toggle>
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#665F55" stroke-width="2" stroke-linecap="round"><path d="M3 9h18M3 15h18"/></svg>
+          </button>
+        </div>
+      </div>
+
+      <nav class="mobile-nav" id="mobile-nav" aria-label="Mobile" hidden>
+        <button class="mobile-nav__close" type="button" aria-label="Close menu" data-burger-close>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 6l12 12M18 6L6 18"/></svg>
+        </button>
+        <ul class="mobile-nav__list">
+          <li><a href="index.html#slider">Favorite coffee</a></li>
+          <li><a href="index.html#about">About</a></li>
+          <li><a href="index.html#app">Mobile app</a></li>
+          <li><a href="index.html#contacts">Contact us</a></li>
+        </ul>
+        <a class="menu-link menu-link--mobile" href="catalog.html">
+          Menu
+          <img src="assets/icons/coffee-cup-light-icon.svg" alt="Menu icon" data-theme-variant="light" />
+          <img src="assets/icons/coffee-cup-dark-icon.svg" alt="Menu icon" data-theme-variant="dark" hidden />
+        </a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="catalog" id="catalog">
+        <div class="container">
+          <h1>Behind each of our cups hides an <em>amazing surprise</em></h1>
+
+          <div class="catalog__categories" role="tablist" aria-label="Menu categories">
+            <button type="button" id="tab-coffee" class="category is-active" data-category-btn="coffee" role="tab" aria-selected="true" aria-controls="panel-coffee">
+              <span class="category__icon" aria-hidden="true">☕</span>
+              Coffee
+            </button>
+            <button type="button" id="tab-tea" class="category" data-category-btn="tea" role="tab" aria-selected="false" aria-controls="panel-tea">
+              <span class="category__icon" aria-hidden="true">🫖</span>
+              Tea
+            </button>
+            <button type="button" id="tab-dessert" class="category" data-category-btn="dessert" role="tab" aria-selected="false" aria-controls="panel-dessert">
+              <span class="category__icon" aria-hidden="true">🍰</span>
+              Dessert
+            </button>
+          </div>
+
+          <h2 class="sr-only">Coffee menu</h2>
+          <div id="panel-coffee" role="tabpanel" aria-labelledby="tab-coffee">
+          <ul class="catalog__grid" data-category-panel="coffee">
+            <li class="card">
+              <div class="card__photo">
+                <img src="assets/images/irish-coffee.webp" alt="Irish coffee" width="600" height="600" />
+              </div>
+              <h3>Irish coffee</h3>
+              <p>Fragrant black coffee with Jameson Irish whiskey and whipped milk</p>
+              <span class="price">$7.00</span>
+              <button type="button" class="card__details" data-modal-trigger data-title="Irish coffee" data-desc="Fragrant black coffee with Jameson Irish whiskey and whipped milk" data-image="assets/images/irish-coffee.webp" data-price="7.00" data-unit="ml" data-sizes="200,300,400" data-additives="Sugar,Cinnamon,Syrup">Details</button>
+            </li>
+            <li class="card">
+              <div class="card__photo">
+                <img src="assets/images/kahlua-coffee.webp" alt="Kahlua coffee" width="600" height="600" />
+              </div>
+              <h3>Kahlua coffee</h3>
+              <p>Classic coffee with milk and Kahlua liqueur under a cap of frothed milk</p>
+              <span class="price">$7.00</span>
+              <button type="button" class="card__details" data-modal-trigger data-title="Kahlua coffee" data-desc="Classic coffee with milk and Kahlua liqueur under a cap of frothed milk" data-image="assets/images/kahlua-coffee.webp" data-price="7.00" data-unit="ml" data-sizes="200,300,400" data-additives="Sugar,Cinnamon,Syrup">Details</button>
+            </li>
+            <li class="card">
+              <div class="card__photo">
+                <img src="assets/images/honey-raf.webp" alt="Honey raf" width="600" height="600" />
+              </div>
+              <h3>Honey raf</h3>
+              <p>Espresso with frothed milk, cream and aromatic honey</p>
+              <span class="price">$5.50</span>
+              <button type="button" class="card__details" data-modal-trigger data-title="Honey raf" data-desc="Espresso with frothed milk, cream and aromatic honey" data-image="assets/images/honey-raf.webp" data-price="5.50" data-unit="ml" data-sizes="200,300,400" data-additives="Sugar,Cinnamon,Syrup">Details</button>
+            </li>
+            <li class="card">
+              <div class="card__photo">
+                <img src="assets/images/ice-cappuccino.webp" alt="Ice cappuccino" width="600" height="600" />
+              </div>
+              <h3>Ice cappuccino</h3>
+              <p>Cappuccino with soft thick foam in summer version with ice</p>
+              <span class="price">$5.00</span>
+              <button type="button" class="card__details" data-modal-trigger data-title="Ice cappuccino" data-desc="Cappuccino with soft thick foam in summer version with ice" data-image="assets/images/ice-cappuccino.webp" data-price="5.00" data-unit="ml" data-sizes="200,300,400" data-additives="Sugar,Cinnamon,Syrup">Details</button>
+            </li>
+            <li class="card card--extra">
+              <div class="card__photo">
+                <img src="assets/images/espresso.webp" alt="Espresso" width="600" height="600" />
+              </div>
+              <h3>Espresso</h3>
+              <p>Classic black coffee</p>
+              <span class="price">$4.50</span>
+              <button type="button" class="card__details" data-modal-trigger data-title="Espresso" data-desc="Classic black coffee" data-image="assets/images/espresso.webp" data-price="4.50" data-unit="ml" data-sizes="200,300,400" data-additives="Sugar,Cinnamon,Syrup">Details</button>
+            </li>
+            <li class="card card--extra">
+              <div class="card__photo">
+                <img src="assets/images/latte.webp" alt="Latte" width="600" height="600" />
+              </div>
+              <h3>Latte</h3>
+              <p>Espresso coffee with the addition of steamed milk and dense milk foam</p>
+              <span class="price">$5.50</span>
+              <button type="button" class="card__details" data-modal-trigger data-title="Latte" data-desc="Espresso coffee with the addition of steamed milk and dense milk foam" data-image="assets/images/latte.webp" data-price="5.50" data-unit="ml" data-sizes="200,300,400" data-additives="Sugar,Cinnamon,Syrup">Details</button>
+            </li>
+            <li class="card card--extra">
+              <div class="card__photo">
+                <img src="assets/images/latte-macchiato.webp" alt="Latte macchiato" width="600" height="600" />
+              </div>
+              <h3>Latte macchiato</h3>
+              <p>Espresso with frothed milk and chocolate</p>
+              <span class="price">$5.50</span>
+              <button type="button" class="card__details" data-modal-trigger data-title="Latte macchiato" data-desc="Espresso with frothed milk and chocolate" data-image="assets/images/latte-macchiato.webp" data-price="5.50" data-unit="ml" data-sizes="200,300,400" data-additives="Sugar,Cinnamon,Syrup">Details</button>
+            </li>
+            <li class="card card--extra">
+              <div class="card__photo">
+                <img src="assets/images/coffee-with-cognac.webp" alt="Coffee with cognac" width="600" height="600" />
+              </div>
+              <h3>Coffee with cognac</h3>
+              <p>Fragrant black coffee with cognac and whipped cream</p>
+              <span class="price">$6.50</span>
+              <button type="button" class="card__details" data-modal-trigger data-title="Coffee with cognac" data-desc="Fragrant black coffee with cognac and whipped cream" data-image="assets/images/coffee-with-cognac.webp" data-price="6.50" data-unit="ml" data-sizes="200,300,400" data-additives="Sugar,Cinnamon,Syrup">Details</button>
+            </li>
+          </ul>
+          </div>
+
+          <h2 class="sr-only">Tea menu</h2>
+          <div id="panel-tea" role="tabpanel" aria-labelledby="tab-tea" hidden>
+          <ul class="catalog__grid" data-category-panel="tea">
+            <li class="card">
+              <div class="card__photo">
+                <img src="assets/images/moroccan-tea.webp" alt="Moroccan" width="600" height="600" />
+              </div>
+              <h3>Moroccan</h3>
+              <p>Fragrant black tea with the addition of tangerine, cinnamon, honey, lemon and mint</p>
+              <span class="price">$4.50</span>
+              <button type="button" class="card__details" data-modal-trigger data-title="Moroccan" data-desc="Fragrant black tea with the addition of tangerine, cinnamon, honey, lemon and mint" data-image="assets/images/moroccan-tea.webp" data-price="4.50" data-unit="ml" data-sizes="200,300,400" data-additives="Sugar,Lemon,Syrup">Details</button>
+            </li>
+            <li class="card">
+              <div class="card__photo">
+                <img src="assets/images/ginger-tea.webp" alt="Ginger" width="600" height="600" />
+              </div>
+              <h3>Ginger</h3>
+              <p>Original black tea with fresh ginger, lemon and honey</p>
+              <span class="price">$5.00</span>
+              <button type="button" class="card__details" data-modal-trigger data-title="Ginger" data-desc="Original black tea with fresh ginger, lemon and honey" data-image="assets/images/ginger-tea.webp" data-price="5.00" data-unit="ml" data-sizes="200,300,400" data-additives="Sugar,Lemon,Syrup">Details</button>
+            </li>
+            <li class="card">
+              <div class="card__photo">
+                <img src="assets/images/cranberry-tea.webp" alt="Cranberry" width="600" height="600" />
+              </div>
+              <h3>Cranberry</h3>
+              <p>Invigorating black tea with cranberry and honey</p>
+              <span class="price">$5.00</span>
+              <button type="button" class="card__details" data-modal-trigger data-title="Cranberry" data-desc="Invigorating black tea with cranberry and honey" data-image="assets/images/cranberry-tea.webp" data-price="5.00" data-unit="ml" data-sizes="200,300,400" data-additives="Sugar,Lemon,Syrup">Details</button>
+            </li>
+            <li class="card">
+              <div class="card__photo">
+                <img src="assets/images/sea-buckthorn-tea.webp" alt="Sea buckthorn" width="600" height="600" />
+              </div>
+              <h3>Sea buckthorn</h3>
+              <p>Toning sweet black tea with sea buckthorn, fresh thyme and cinnamon</p>
+              <span class="price">$5.50</span>
+              <button type="button" class="card__details" data-modal-trigger data-title="Sea buckthorn" data-desc="Toning sweet black tea with sea buckthorn, fresh thyme and cinnamon" data-image="assets/images/sea-buckthorn-tea.webp" data-price="5.50" data-unit="ml" data-sizes="200,300,400" data-additives="Sugar,Lemon,Syrup">Details</button>
+            </li>
+          </ul>
+          </div>
+
+          <h2 class="sr-only">Dessert menu</h2>
+          <div id="panel-dessert" role="tabpanel" aria-labelledby="tab-dessert" hidden>
+          <ul class="catalog__grid" data-category-panel="dessert">
+            <li class="card">
+              <div class="card__photo">
+                <img src="assets/images/marble-cheesecake.webp" alt="Marble cheesecake" width="600" height="600" />
+              </div>
+              <h3>Marble cheesecake</h3>
+              <p>Philadelphia cheese with lemon zest on a light sponge cake and red currant jam</p>
+              <span class="price">$3.50</span>
+              <button type="button" class="card__details" data-modal-trigger data-title="Marble cheesecake" data-desc="Philadelphia cheese with lemon zest on a light sponge cake and red currant jam" data-image="assets/images/marble-cheesecake.webp" data-price="3.50" data-unit="g" data-sizes="50,100,200" data-additives="Berries,Nuts,Jam">Details</button>
+            </li>
+            <li class="card">
+              <div class="card__photo">
+                <img src="assets/images/red-velvet.webp" alt="Red velvet" width="600" height="600" />
+              </div>
+              <h3>Red velvet</h3>
+              <p>Layer cake with cream cheese frosting</p>
+              <span class="price">$4.00</span>
+              <button type="button" class="card__details" data-modal-trigger data-title="Red velvet" data-desc="Layer cake with cream cheese frosting" data-image="assets/images/red-velvet.webp" data-price="4.00" data-unit="g" data-sizes="50,100,200" data-additives="Berries,Nuts,Jam">Details</button>
+            </li>
+            <li class="card">
+              <div class="card__photo">
+                <img src="assets/images/cheesecakes.webp" alt="Cheesecakes" width="600" height="600" />
+              </div>
+              <h3>Cheesecakes</h3>
+              <p>Soft cottage cheese pancakes with sour cream and fresh berries and sprinkled with powdered sugar</p>
+              <span class="price">$4.50</span>
+              <button type="button" class="card__details" data-modal-trigger data-title="Cheesecakes" data-desc="Soft cottage cheese pancakes with sour cream and fresh berries and sprinkled with powdered sugar" data-image="assets/images/cheesecakes.webp" data-price="4.50" data-unit="g" data-sizes="50,100,200" data-additives="Berries,Nuts,Jam">Details</button>
+            </li>
+            <li class="card">
+              <div class="card__photo">
+                <img src="assets/images/creme-brulee.webp" alt="Creme brulee" width="600" height="600" />
+              </div>
+              <h3>Creme brulee</h3>
+              <p>Delicate creamy dessert in a caramel basket with wild berries</p>
+              <span class="price">$4.00</span>
+              <button type="button" class="card__details" data-modal-trigger data-title="Creme brulee" data-desc="Delicate creamy dessert in a caramel basket with wild berries" data-image="assets/images/creme-brulee.webp" data-price="4.00" data-unit="g" data-sizes="50,100,200" data-additives="Berries,Nuts,Jam">Details</button>
+            </li>
+            <li class="card card--extra">
+              <div class="card__photo">
+                <img src="assets/images/pancakes.webp" alt="Pancakes" width="600" height="600" />
+              </div>
+              <h3>Pancakes</h3>
+              <p>Tender pancakes with strawberry jam and fresh strawberries</p>
+              <span class="price">$4.50</span>
+              <button type="button" class="card__details" data-modal-trigger data-title="Pancakes" data-desc="Tender pancakes with strawberry jam and fresh strawberries" data-image="assets/images/pancakes.webp" data-price="4.50" data-unit="g" data-sizes="50,100,200" data-additives="Berries,Nuts,Jam">Details</button>
+            </li>
+            <li class="card card--extra">
+              <div class="card__photo">
+                <img src="assets/images/honey-cake.webp" alt="Honey cake" width="600" height="600" />
+              </div>
+              <h3>Honey cake</h3>
+              <p>Classic honey cake with delicate custard</p>
+              <span class="price">$4.50</span>
+              <button type="button" class="card__details" data-modal-trigger data-title="Honey cake" data-desc="Classic honey cake with delicate custard" data-image="assets/images/honey-cake.webp" data-price="4.50" data-unit="g" data-sizes="50,100,200" data-additives="Berries,Nuts,Jam">Details</button>
+            </li>
+            <li class="card card--extra">
+              <div class="card__photo">
+                <img src="assets/images/chocolate-cake.webp" alt="Chocolate cake" width="600" height="600" />
+              </div>
+              <h3>Chocolate cake</h3>
+              <p>Cake with hot chocolate filling and nuts with dried apricots</p>
+              <span class="price">$5.50</span>
+              <button type="button" class="card__details" data-modal-trigger data-title="Chocolate cake" data-desc="Cake with hot chocolate filling and nuts with dried apricots" data-image="assets/images/chocolate-cake.webp" data-price="5.50" data-unit="g" data-sizes="50,100,200" data-additives="Berries,Nuts,Jam">Details</button>
+            </li>
+            <li class="card card--extra">
+              <div class="card__photo">
+                <img src="assets/images/black-forest.webp" alt="Black forest" width="600" height="600" />
+              </div>
+              <h3>Black forest</h3>
+              <p>A combination of thin sponge cake with cherry jam and light chocolate mousse</p>
+              <span class="price">$6.50</span>
+              <button type="button" class="card__details" data-modal-trigger data-title="Black forest" data-desc="A combination of thin sponge cake with cherry jam and light chocolate mousse" data-image="assets/images/black-forest.webp" data-price="6.50" data-unit="g" data-sizes="50,100,200" data-additives="Berries,Nuts,Jam">Details</button>
+            </li>
+          </ul>
+          </div>
+
+          <button type="button" class="show-more" data-show-more="coffee" aria-label="Show more coffee">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M21.8883 13.5C21.1645 18.3113 17.013 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C16.1006 2 19.6248 4.46819 21.1679 8" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" /><path d="M17 8H21.4C21.7314 8 22 7.73137 22 7.4V3" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" /></svg>
+          </button>
+          <button type="button" class="show-more" data-show-more="dessert" aria-label="Show more dessert" hidden>
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M21.8883 13.5C21.1645 18.3113 17.013 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C16.1006 2 19.6248 4.46819 21.1679 8" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" /><path d="M17 8H21.4C21.7314 8 22 7.73137 22 7.4V3" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" /></svg>
+          </button>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer" id="contacts">
+      <div class="container footer__inner">
+        <div class="footer__brand">
+          <h2>Sip, Savor, Smile.<br /><em>It's coffee time!</em></h2>
+          <ul class="socials">
+            <li>
+              <a href="#" aria-label="Twitter">
+                <svg width="59" height="59" viewBox="0 0 60 60" fill="none">
+                  <rect x="0.5" y="0.5" width="59" height="59" rx="29.5" stroke="var(--color-border-primary)" />
+                  <path d="M41 21.0101C41 21.0101 38.9821 22.2022 37.86 22.5401C37.2577 21.8476 36.4573 21.3567 35.567 21.134C34.6767 20.9112 33.7395 20.9673 32.8821 21.2945C32.0247 21.6218 31.2884 22.2045 30.773 22.9638C30.2575 23.7231 29.9877 24.6224 30 25.5401V26.5401C28.2426 26.5856 26.5013 26.1959 24.931 25.4055C23.3607 24.6151 22.0103 23.4487 21 22.0101C21 22.0101 17 31.0101 26 35.0101C23.9405 36.408 21.4872 37.109 19 37.0101C28 42.0101 39 37.0101 39 25.5101C38.9991 25.2315 38.9723 24.9537 38.92 24.6801C39.9406 23.6735 41 21.0101 41 21.0101Z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a href="#" aria-label="Instagram">
+                <svg width="59" height="59" viewBox="0 0 60 60" fill="none">
+                  <rect x="0.5" y="0.5" width="59" height="59" rx="29.5" stroke="var(--color-border-primary)" />
+                  <path d="M30 34C32.2091 34 34 32.2091 34 30C34 27.7909 32.2091 26 30 26C27.7909 26 26 27.7909 26 30C26 32.2091 27.7909 34 30 34Z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" />
+                  <path d="M21 34V26C21 23.2386 23.2386 21 26 21H34C36.7614 21 39 23.2386 39 26V34C39 36.7614 36.7614 39 34 39H26C23.2386 39 21 36.7614 21 34Z" stroke="currentColor" />
+                  <path d="M35.5 24.51L35.51 24.4989" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a href="#" aria-label="Facebook">
+                <svg width="59" height="59" viewBox="0 0 60 60" fill="none">
+                  <rect x="0.5" y="0.5" width="59" height="59" rx="29.5" stroke="var(--color-border-primary)" />
+                  <path d="M35 20H32C30.6739 20 29.4021 20.5268 28.4645 21.4645C27.5268 22.4021 27 23.6739 27 25V28H24V32H27V40H31V32H34L35 28H31V25C31 24.7348 31.1054 24.4804 31.2929 24.2929C31.4804 24.1054 31.7348 24 32 24H35V20Z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="footer__contacts">
+          <h3>Contact us</h3>
+          <address>
+            <ul>
+              <li>
+                <a
+                  href="https://maps.google.com/?q=8558+Green+Rd.,+LA"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  <img src="assets/icons/place-icon.svg" alt="Location icon" width="20" height="20" />
+                  8558 Green Rd., LA
+                </a>
+              </li>
+              <li>
+                <a href="tel:+16035550123">
+                  <img src="assets/icons/phone-icon.svg" alt="Phone icon" width="20" height="20" />
+                  +1 (603) 555-0123
+                </a>
+              </li>
+              <li>
+                <img src="assets/icons/clock-icon.svg" alt="Clock icon" width="20" height="20" />
+                Mon&ndash;Sat: 9:00&ndash;23:00
+              </li>
+            </ul>
+          </address>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
