@@ -10,6 +10,7 @@
       href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,600;1,600&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="css/variables.css" />
     <link rel="stylesheet" href="css/style.css" />
     <script src="js/theme.js" defer></script>
   </head>
@@ -141,6 +142,7 @@
           muted
           loop
           playsinline
+          fetchpriority="high"
         >
           <source src="assets/videos/hero.mp4" type="video/mp4" />
         </video>
@@ -350,6 +352,8 @@
           <img
             class="app__image"
             src="assets/images/app-phones.webp"
+            srcset="assets/images/app-phones-420.webp 420w, assets/images/app-phones.webp 630w"
+            sizes="(max-width: 500px) 100vw, 630px"
             alt="Resource app screens shown on two phones"
             width="700"
             height="700"
