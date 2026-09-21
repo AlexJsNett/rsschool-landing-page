@@ -95,7 +95,8 @@ main > section + section {
 }
 
 .catalog {
-  padding-block: var(--section-gap);
+  padding-top: 20px;
+  padding-bottom: var(--section-gap);
 }
 
 .app {
@@ -694,8 +695,10 @@ main > section + section {
 /* ---------- catalog ---------- */
 
 .catalog h1 {
+  font-size: 60px;
+  line-height: 125%;
   text-align: center;
-  max-width: 900px;
+  max-width: 800px;
   margin-inline: auto;
   margin-bottom: 40px;
 }
@@ -705,14 +708,14 @@ main > section + section {
   align-items: center;
   justify-content: center;
   gap: 12px;
-  margin-bottom: 48px;
+  margin-bottom: 40px;
 }
 
 .category {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  padding: 10px 20px;
+  padding: 8px 16px 8px 8px;
   border-radius: 999px;
   border: 1px solid var(--color-border-primary);
   background: transparent;
@@ -729,38 +732,78 @@ main > section + section {
   border-color: var(--color-bg-container);
 }
 
+.category__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: var(--color-border-primary);
+  font-size: 16px;
+  line-height: 1;
+  transition: background var(--transition);
+}
+
+.category.is-active .category__icon,
+.category:hover .category__icon {
+  background: var(--color-text-inverse);
+}
+
 .catalog__grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: var(--gutter);
 }
 
 .card {
   display: flex;
   flex-direction: column;
-  gap: 8px;
-  padding: 16px;
+  overflow: hidden;
   border: 1px solid var(--color-border-primary);
-  border-radius: var(--radius-md);
+  border-radius: 16px;
+  background: transparent;
+  cursor: pointer;
 }
 
-.card img {
+.card__photo {
+  width: calc(100% + 2px);
+  margin: -1px -1px 0;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  border-radius: 16px;
+}
+
+.card__photo img {
   width: 100%;
-  height: 200px;
+  height: 100%;
   object-fit: cover;
-  border-radius: var(--radius-sm);
-  margin-bottom: 8px;
+  display: block;
+  transform: scale(1.15);
+  transition: transform var(--transition);
+}
+
+.card:hover .card__photo img {
+  transform: scale(1);
+}
+
+.card h3 {
+  margin: 20px 20px 8px;
+  color: var(--color-text-primary);
 }
 
 .card p {
+  margin: 0 20px 16px;
   color: var(--color-text-primary);
-  opacity: 0.75;
   flex-grow: 1;
 }
 
 .card .price {
+  margin: 0 20px 20px;
   font-weight: 600;
   font-size: var(--fs-h3);
+  color: var(--color-text-primary);
 }
 
 .card__details {
@@ -775,14 +818,23 @@ main > section + section {
   display: none;
   align-items: center;
   justify-content: center;
-  width: 44px;
-  height: 44px;
+  width: 60px;
+  height: 60px;
   margin: 40px auto 0;
   border-radius: 50%;
   border: 1px solid var(--color-border-primary);
   background: transparent;
   color: var(--color-text-primary);
   cursor: pointer;
+  transition:
+    background var(--transition),
+    color var(--transition);
+}
+
+.show-more:hover {
+  background: var(--color-bg-container);
+  color: var(--color-text-inverse);
+  border-color: var(--color-bg-container);
 }
 
 /* ---------- tablet ---------- */
@@ -850,16 +902,12 @@ main > section + section {
     padding-inline: 40px;
   }
 
-  .catalog__grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
   .card--extra {
     display: none;
   }
 
   .show-more {
-    display: inline-flex;
+    display: flex;
   }
 }
 
@@ -897,7 +945,7 @@ main > section + section {
     gap: 40px;
   }
 
-  .catalog__grid {
-    grid-template-columns: 1fr;
+  .catalog h1 {
+    font-size: 32px;
   }
 }

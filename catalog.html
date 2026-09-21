@@ -81,68 +81,87 @@
 
           <div class="catalog__categories" role="tablist" aria-label="Menu categories">
             <button type="button" class="category is-active" data-category-btn="coffee" role="tab" aria-selected="true">
-              <span aria-hidden="true">☕</span> Coffee
+              <span class="category__icon" aria-hidden="true">☕</span>
+              Coffee
             </button>
             <button type="button" class="category" data-category-btn="tea" role="tab" aria-selected="false">
-              <span aria-hidden="true">🍵</span> Tea
+              <span class="category__icon" aria-hidden="true">🫖</span>
+              Tea
             </button>
             <button type="button" class="category" data-category-btn="dessert" role="tab" aria-selected="false">
-              <span aria-hidden="true">🍰</span> Dessert
+              <span class="category__icon" aria-hidden="true">🍰</span>
+              Dessert
             </button>
           </div>
 
           <ul class="catalog__grid" data-category-panel="coffee">
             <li class="card">
-              <img src="assets/images/irish-coffee.webp" alt="Irish coffee" width="600" height="600" />
+              <div class="card__photo">
+                <img src="assets/images/irish-coffee.webp" alt="Irish coffee" width="600" height="600" />
+              </div>
               <h3>Irish coffee</h3>
               <p>Fragrant black coffee with Jameson Irish whiskey and whipped milk</p>
               <span class="price">$7.00</span>
               <button type="button" class="card__details" data-modal-trigger data-title="Irish coffee" data-desc="Fragrant black coffee with Jameson Irish whiskey and whipped milk" data-image="assets/images/irish-coffee.webp" data-price="7.00" data-unit="ml" data-sizes="200,300,400" data-additives="Sugar,Cinnamon,Syrup">Details</button>
             </li>
             <li class="card">
-              <img src="assets/images/kahlua-coffee.webp" alt="Kahlua coffee" width="600" height="600" />
+              <div class="card__photo">
+                <img src="assets/images/kahlua-coffee.webp" alt="Kahlua coffee" width="600" height="600" />
+              </div>
               <h3>Kahlua coffee</h3>
               <p>Classic coffee with milk and Kahlua liqueur under a cap of frothed milk</p>
               <span class="price">$7.00</span>
               <button type="button" class="card__details" data-modal-trigger data-title="Kahlua coffee" data-desc="Classic coffee with milk and Kahlua liqueur under a cap of frothed milk" data-image="assets/images/kahlua-coffee.webp" data-price="7.00" data-unit="ml" data-sizes="200,300,400" data-additives="Sugar,Cinnamon,Syrup">Details</button>
             </li>
             <li class="card">
-              <img src="assets/images/honey-raf.webp" alt="Honey raf" width="600" height="600" />
+              <div class="card__photo">
+                <img src="assets/images/honey-raf.webp" alt="Honey raf" width="600" height="600" />
+              </div>
               <h3>Honey raf</h3>
               <p>Espresso with frothed milk, cream and aromatic honey</p>
               <span class="price">$5.50</span>
               <button type="button" class="card__details" data-modal-trigger data-title="Honey raf" data-desc="Espresso with frothed milk, cream and aromatic honey" data-image="assets/images/honey-raf.webp" data-price="5.50" data-unit="ml" data-sizes="200,300,400" data-additives="Sugar,Cinnamon,Syrup">Details</button>
             </li>
             <li class="card">
-              <img src="assets/images/ice-cappuccino.webp" alt="Ice cappuccino" width="600" height="600" />
+              <div class="card__photo">
+                <img src="assets/images/ice-cappuccino.webp" alt="Ice cappuccino" width="600" height="600" />
+              </div>
               <h3>Ice cappuccino</h3>
               <p>Cappuccino with soft thick foam in summer version with ice</p>
               <span class="price">$5.00</span>
               <button type="button" class="card__details" data-modal-trigger data-title="Ice cappuccino" data-desc="Cappuccino with soft thick foam in summer version with ice" data-image="assets/images/ice-cappuccino.webp" data-price="5.00" data-unit="ml" data-sizes="200,300,400" data-additives="Sugar,Cinnamon,Syrup">Details</button>
             </li>
             <li class="card card--extra">
-              <img src="assets/images/espresso.webp" alt="Espresso" width="600" height="600" />
+              <div class="card__photo">
+                <img src="assets/images/espresso.webp" alt="Espresso" width="600" height="600" />
+              </div>
               <h3>Espresso</h3>
               <p>Classic black coffee</p>
               <span class="price">$4.50</span>
               <button type="button" class="card__details" data-modal-trigger data-title="Espresso" data-desc="Classic black coffee" data-image="assets/images/espresso.webp" data-price="4.50" data-unit="ml" data-sizes="200,300,400" data-additives="Sugar,Cinnamon,Syrup">Details</button>
             </li>
             <li class="card card--extra">
-              <img src="assets/images/latte.webp" alt="Latte" width="600" height="600" />
+              <div class="card__photo">
+                <img src="assets/images/latte.webp" alt="Latte" width="600" height="600" />
+              </div>
               <h3>Latte</h3>
               <p>Espresso coffee with the addition of steamed milk and dense milk foam</p>
               <span class="price">$5.50</span>
               <button type="button" class="card__details" data-modal-trigger data-title="Latte" data-desc="Espresso coffee with the addition of steamed milk and dense milk foam" data-image="assets/images/latte.webp" data-price="5.50" data-unit="ml" data-sizes="200,300,400" data-additives="Sugar,Cinnamon,Syrup">Details</button>
             </li>
             <li class="card card--extra">
-              <img src="assets/images/latte-macchiato.webp" alt="Latte macchiato" width="600" height="600" />
+              <div class="card__photo">
+                <img src="assets/images/latte-macchiato.webp" alt="Latte macchiato" width="600" height="600" />
+              </div>
               <h3>Latte macchiato</h3>
               <p>Espresso with frothed milk and chocolate</p>
               <span class="price">$5.50</span>
               <button type="button" class="card__details" data-modal-trigger data-title="Latte macchiato" data-desc="Espresso with frothed milk and chocolate" data-image="assets/images/latte-macchiato.webp" data-price="5.50" data-unit="ml" data-sizes="200,300,400" data-additives="Sugar,Cinnamon,Syrup">Details</button>
             </li>
             <li class="card card--extra">
-              <img src="assets/images/coffee-with-cognac.webp" alt="Coffee with cognac" width="600" height="600" />
+              <div class="card__photo">
+                <img src="assets/images/coffee-with-cognac.webp" alt="Coffee with cognac" width="600" height="600" />
+              </div>
               <h3>Coffee with cognac</h3>
               <p>Fragrant black coffee with cognac and whipped cream</p>
               <span class="price">$6.50</span>
@@ -152,28 +171,36 @@
 
           <ul class="catalog__grid" data-category-panel="tea" hidden>
             <li class="card">
-              <img src="assets/images/moroccan-tea.webp" alt="Moroccan" width="600" height="600" />
+              <div class="card__photo">
+                <img src="assets/images/moroccan-tea.webp" alt="Moroccan" width="600" height="600" />
+              </div>
               <h3>Moroccan</h3>
               <p>Fragrant black tea with the addition of tangerine, cinnamon, honey, lemon and mint</p>
               <span class="price">$4.50</span>
               <button type="button" class="card__details" data-modal-trigger data-title="Moroccan" data-desc="Fragrant black tea with the addition of tangerine, cinnamon, honey, lemon and mint" data-image="assets/images/moroccan-tea.webp" data-price="4.50" data-unit="ml" data-sizes="200,300,400" data-additives="Sugar,Lemon,Syrup">Details</button>
             </li>
             <li class="card">
-              <img src="assets/images/ginger-tea.webp" alt="Ginger" width="600" height="600" />
+              <div class="card__photo">
+                <img src="assets/images/ginger-tea.webp" alt="Ginger" width="600" height="600" />
+              </div>
               <h3>Ginger</h3>
               <p>Original black tea with fresh ginger, lemon and honey</p>
               <span class="price">$5.00</span>
               <button type="button" class="card__details" data-modal-trigger data-title="Ginger" data-desc="Original black tea with fresh ginger, lemon and honey" data-image="assets/images/ginger-tea.webp" data-price="5.00" data-unit="ml" data-sizes="200,300,400" data-additives="Sugar,Lemon,Syrup">Details</button>
             </li>
             <li class="card">
-              <img src="assets/images/cranberry-tea.webp" alt="Cranberry" width="600" height="600" />
+              <div class="card__photo">
+                <img src="assets/images/cranberry-tea.webp" alt="Cranberry" width="600" height="600" />
+              </div>
               <h3>Cranberry</h3>
               <p>Invigorating black tea with cranberry and honey</p>
               <span class="price">$5.00</span>
               <button type="button" class="card__details" data-modal-trigger data-title="Cranberry" data-desc="Invigorating black tea with cranberry and honey" data-image="assets/images/cranberry-tea.webp" data-price="5.00" data-unit="ml" data-sizes="200,300,400" data-additives="Sugar,Lemon,Syrup">Details</button>
             </li>
             <li class="card">
-              <img src="assets/images/sea-buckthorn-tea.webp" alt="Sea buckthorn" width="600" height="600" />
+              <div class="card__photo">
+                <img src="assets/images/sea-buckthorn-tea.webp" alt="Sea buckthorn" width="600" height="600" />
+              </div>
               <h3>Sea buckthorn</h3>
               <p>Toning sweet black tea with sea buckthorn, fresh thyme and cinnamon</p>
               <span class="price">$5.50</span>
@@ -183,56 +210,72 @@
 
           <ul class="catalog__grid" data-category-panel="dessert" hidden>
             <li class="card">
-              <img src="assets/images/marble-cheesecake.webp" alt="Marble cheesecake" width="600" height="600" />
+              <div class="card__photo">
+                <img src="assets/images/marble-cheesecake.webp" alt="Marble cheesecake" width="600" height="600" />
+              </div>
               <h3>Marble cheesecake</h3>
               <p>Philadelphia cheese with lemon zest on a light sponge cake and red currant jam</p>
               <span class="price">$3.50</span>
               <button type="button" class="card__details" data-modal-trigger data-title="Marble cheesecake" data-desc="Philadelphia cheese with lemon zest on a light sponge cake and red currant jam" data-image="assets/images/marble-cheesecake.webp" data-price="3.50" data-unit="g" data-sizes="50,100,200" data-additives="Berries,Nuts,Jam">Details</button>
             </li>
             <li class="card">
-              <img src="assets/images/red-velvet.webp" alt="Red velvet" width="600" height="600" />
+              <div class="card__photo">
+                <img src="assets/images/red-velvet.webp" alt="Red velvet" width="600" height="600" />
+              </div>
               <h3>Red velvet</h3>
               <p>Layer cake with cream cheese frosting</p>
               <span class="price">$4.00</span>
               <button type="button" class="card__details" data-modal-trigger data-title="Red velvet" data-desc="Layer cake with cream cheese frosting" data-image="assets/images/red-velvet.webp" data-price="4.00" data-unit="g" data-sizes="50,100,200" data-additives="Berries,Nuts,Jam">Details</button>
             </li>
             <li class="card">
-              <img src="assets/images/cheesecakes.webp" alt="Cheesecakes" width="600" height="600" />
+              <div class="card__photo">
+                <img src="assets/images/cheesecakes.webp" alt="Cheesecakes" width="600" height="600" />
+              </div>
               <h3>Cheesecakes</h3>
               <p>Soft cottage cheese pancakes with sour cream and fresh berries and sprinkled with powdered sugar</p>
               <span class="price">$4.50</span>
               <button type="button" class="card__details" data-modal-trigger data-title="Cheesecakes" data-desc="Soft cottage cheese pancakes with sour cream and fresh berries and sprinkled with powdered sugar" data-image="assets/images/cheesecakes.webp" data-price="4.50" data-unit="g" data-sizes="50,100,200" data-additives="Berries,Nuts,Jam">Details</button>
             </li>
             <li class="card">
-              <img src="assets/images/creme-brulee.webp" alt="Creme brulee" width="600" height="600" />
+              <div class="card__photo">
+                <img src="assets/images/creme-brulee.webp" alt="Creme brulee" width="600" height="600" />
+              </div>
               <h3>Creme brulee</h3>
               <p>Delicate creamy dessert in a caramel basket with wild berries</p>
               <span class="price">$4.00</span>
               <button type="button" class="card__details" data-modal-trigger data-title="Creme brulee" data-desc="Delicate creamy dessert in a caramel basket with wild berries" data-image="assets/images/creme-brulee.webp" data-price="4.00" data-unit="g" data-sizes="50,100,200" data-additives="Berries,Nuts,Jam">Details</button>
             </li>
             <li class="card card--extra">
-              <img src="assets/images/pancakes.webp" alt="Pancakes" width="600" height="600" />
+              <div class="card__photo">
+                <img src="assets/images/pancakes.webp" alt="Pancakes" width="600" height="600" />
+              </div>
               <h3>Pancakes</h3>
               <p>Tender pancakes with strawberry jam and fresh strawberries</p>
               <span class="price">$4.50</span>
               <button type="button" class="card__details" data-modal-trigger data-title="Pancakes" data-desc="Tender pancakes with strawberry jam and fresh strawberries" data-image="assets/images/pancakes.webp" data-price="4.50" data-unit="g" data-sizes="50,100,200" data-additives="Berries,Nuts,Jam">Details</button>
             </li>
             <li class="card card--extra">
-              <img src="assets/images/honey-cake.webp" alt="Honey cake" width="600" height="600" />
+              <div class="card__photo">
+                <img src="assets/images/honey-cake.webp" alt="Honey cake" width="600" height="600" />
+              </div>
               <h3>Honey cake</h3>
               <p>Classic honey cake with delicate custard</p>
               <span class="price">$4.50</span>
               <button type="button" class="card__details" data-modal-trigger data-title="Honey cake" data-desc="Classic honey cake with delicate custard" data-image="assets/images/honey-cake.webp" data-price="4.50" data-unit="g" data-sizes="50,100,200" data-additives="Berries,Nuts,Jam">Details</button>
             </li>
             <li class="card card--extra">
-              <img src="assets/images/chocolate-cake.webp" alt="Chocolate cake" width="600" height="600" />
+              <div class="card__photo">
+                <img src="assets/images/chocolate-cake.webp" alt="Chocolate cake" width="600" height="600" />
+              </div>
               <h3>Chocolate cake</h3>
               <p>Cake with hot chocolate filling and nuts with dried apricots</p>
               <span class="price">$5.50</span>
               <button type="button" class="card__details" data-modal-trigger data-title="Chocolate cake" data-desc="Cake with hot chocolate filling and nuts with dried apricots" data-image="assets/images/chocolate-cake.webp" data-price="5.50" data-unit="g" data-sizes="50,100,200" data-additives="Berries,Nuts,Jam">Details</button>
             </li>
             <li class="card card--extra">
-              <img src="assets/images/black-forest.webp" alt="Black forest" width="600" height="600" />
+              <div class="card__photo">
+                <img src="assets/images/black-forest.webp" alt="Black forest" width="600" height="600" />
+              </div>
               <h3>Black forest</h3>
               <p>A combination of thin sponge cake with cherry jam and light chocolate mousse</p>
               <span class="price">$6.50</span>
@@ -241,10 +284,10 @@
           </ul>
 
           <button type="button" class="show-more" data-show-more="coffee" aria-label="Show more coffee">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12a9 9 0 11-3-6.7"/><path d="M21 3v5h-5"/></svg>
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M21.8883 13.5C21.1645 18.3113 17.013 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C16.1006 2 19.6248 4.46819 21.1679 8" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" /><path d="M17 8H21.4C21.7314 8 22 7.73137 22 7.4V3" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" /></svg>
           </button>
           <button type="button" class="show-more" data-show-more="dessert" aria-label="Show more dessert" hidden>
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12a9 9 0 11-3-6.7"/><path d="M21 3v5h-5"/></svg>
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M21.8883 13.5C21.1645 18.3113 17.013 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C16.1006 2 19.6248 4.46819 21.1679 8" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" /><path d="M17 8H21.4C21.7314 8 22 7.73137 22 7.4V3" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" /></svg>
           </button>
         </div>
       </section>
