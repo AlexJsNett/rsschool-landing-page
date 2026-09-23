@@ -4,6 +4,18 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Resource Coffee House</title>
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+    <script>
+      (function () {
+        var theme = localStorage.getItem("theme");
+        if (theme !== "light" && theme !== "dark") {
+          theme = window.matchMedia("(prefers-color-scheme: dark)").matches
+            ? "dark"
+            : "light";
+        }
+        document.documentElement.setAttribute("data-theme", theme);
+      })();
+    </script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -88,38 +100,34 @@
             data-burger-toggle
           >
             <svg
+              data-burger-icon="menu"
               width="22"
               height="22"
               viewBox="0 0 24 24"
               fill="none"
-              stroke="#665F55"
+              stroke="currentColor"
               stroke-width="2"
               stroke-linecap="round"
             >
               <path d="M3 9h18M3 15h18" />
+            </svg>
+            <svg
+              data-burger-icon="close"
+              class="is-hidden"
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path d="M6 6l12 12M18 6L6 18" />
             </svg>
           </button>
         </div>
       </div>
 
       <nav class="mobile-nav" id="mobile-nav" aria-label="Mobile" hidden>
-        <button
-          class="mobile-nav__close"
-          type="button"
-          aria-label="Close menu"
-          data-burger-close
-        >
-          <svg
-            width="20"
-            height="20"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-          >
-            <path d="M6 6l12 12M18 6L6 18" />
-          </svg>
-        </button>
         <ul class="mobile-nav__list">
           <li><a href="#slider">Favorite coffee</a></li>
           <li><a href="#about">About</a></li>
@@ -199,46 +207,22 @@
                   width="600"
                   height="600"
                 />
-                <div class="slider__slide-content">
-                  <h3>S'mores Frappuccino</h3>
-                  <p>
-                    This new drink takes an espresso and mixes it with brown
-                    sugar and cinnamon before being topped with oat milk.
-                  </p>
-                  <span class="price">$5.50</span>
-                </div>
               </li>
               <li class="slider__slide" data-slider-slide hidden>
                 <img
-                  src="assets/images/latte-macchiato.webp"
+                  src="assets/images/cappuccino-glass.webp"
                   alt="Caramel Macchiato"
                   width="600"
                   height="600"
                 />
-                <div class="slider__slide-content">
-                  <h3>Caramel Macchiato</h3>
-                  <p>
-                    Fragrant and unique classic espresso with rich
-                    caramel-peanut syrup, with cream under whipped thick foam.
-                  </p>
-                  <span class="price">$5.00</span>
-                </div>
               </li>
               <li class="slider__slide" data-slider-slide hidden>
                 <img
-                  src="assets/images/ice-cappuccino.webp"
+                  src="assets/images/iced-coffee.webp"
                   alt="Ice coffee"
                   width="600"
                   height="600"
                 />
-                <div class="slider__slide-content">
-                  <h3>Ice coffee</h3>
-                  <p>
-                    A popular summer drink that tones and invigorates.
-                    Prepared from coffee, milk and ice.
-                  </p>
-                  <span class="price">$4.50</span>
-                </div>
               </li>
             </ul>
 
@@ -263,10 +247,37 @@
             </button>
           </div>
 
+          <div class="slider__caption" data-slider-captions>
+            <div class="slider__caption-item is-active" data-slider-caption>
+              <h3>S'mores Frappuccino</h3>
+              <p>
+                This new drink takes an espresso and mixes it with brown
+                sugar and cinnamon before being topped with oat milk.
+              </p>
+              <span class="price">$5.50</span>
+            </div>
+            <div class="slider__caption-item" data-slider-caption hidden>
+              <h3>Caramel Macchiato</h3>
+              <p>
+                Fragrant and unique classic espresso with rich
+                caramel-peanut syrup, with cream under whipped thick foam.
+              </p>
+              <span class="price">$5.00</span>
+            </div>
+            <div class="slider__caption-item" data-slider-caption hidden>
+              <h3>Ice coffee</h3>
+              <p>
+                A popular summer drink that tones and invigorates.
+                Prepared from coffee, milk and ice.
+              </p>
+              <span class="price">$4.50</span>
+            </div>
+          </div>
+
           <div class="slider__dots" data-slider-dots>
-            <span class="slider__dot is-active"></span>
-            <span class="slider__dot"></span>
-            <span class="slider__dot"></span>
+            <button type="button" class="slider__dot is-active" aria-label="Go to slide 1"></button>
+            <button type="button" class="slider__dot" aria-label="Go to slide 2"></button>
+            <button type="button" class="slider__dot" aria-label="Go to slide 3"></button>
           </div>
         </div>
       </section>
@@ -440,5 +451,8 @@
         </div>
       </div>
     </footer>
+
+    <script src="js/nav.js" defer></script>
+    <script src="js/slider.js" defer></script>
   </body>
 </html>
