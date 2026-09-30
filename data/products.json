@@ -1,0 +1,290 @@
+[
+  {
+    "id": "irish-coffee",
+    "category": "coffee",
+    "title": "Irish coffee",
+    "desc": "Fragrant black coffee with Jameson Irish whiskey and whipped milk",
+    "image": "assets/images/irish-coffee.webp",
+    "unit": "ml",
+    "sizes": [
+      { "label": "S", "volume": 200, "price": 6.0 },
+      { "label": "M", "volume": 300, "price": 7.0, "default": true },
+      { "label": "L", "volume": 400, "price": 8.0 }
+    ],
+    "additives": ["Sugar", "Cinnamon", "Syrup"]
+  },
+  {
+    "id": "kahlua-coffee",
+    "category": "coffee",
+    "title": "Kahlua coffee",
+    "desc": "Classic coffee with milk and Kahlua liqueur under a cap of frothed milk",
+    "image": "assets/images/kahlua-coffee.webp",
+    "unit": "ml",
+    "sizes": [
+      { "label": "S", "volume": 200, "price": 6.0 },
+      { "label": "M", "volume": 300, "price": 7.0, "default": true },
+      { "label": "L", "volume": 400, "price": 8.0 }
+    ],
+    "additives": ["Sugar", "Cinnamon", "Syrup"]
+  },
+  {
+    "id": "honey-raf",
+    "category": "coffee",
+    "title": "Honey raf",
+    "desc": "Espresso with frothed milk, cream and aromatic honey",
+    "image": "assets/images/honey-raf.webp",
+    "unit": "ml",
+    "sizes": [
+      { "label": "S", "volume": 200, "price": 4.75 },
+      { "label": "M", "volume": 300, "price": 5.5, "default": true },
+      { "label": "L", "volume": 400, "price": 6.25 }
+    ],
+    "additives": ["Sugar", "Cinnamon", "Syrup"]
+  },
+  {
+    "id": "ice-cappuccino",
+    "category": "coffee",
+    "title": "Ice cappuccino",
+    "desc": "Cappuccino with soft thick foam in summer version with ice",
+    "image": "assets/images/ice-cappuccino.webp",
+    "unit": "ml",
+    "sizes": [
+      { "label": "S", "volume": 200, "price": 4.25 },
+      { "label": "M", "volume": 300, "price": 5.0, "default": true },
+      { "label": "L", "volume": 400, "price": 5.75 }
+    ],
+    "additives": ["Sugar", "Cinnamon", "Syrup"]
+  },
+  {
+    "id": "espresso",
+    "category": "coffee",
+    "title": "Espresso",
+    "desc": "Classic black coffee",
+    "image": "assets/images/espresso.webp",
+    "unit": "ml",
+    "sizes": [
+      { "label": "S", "volume": 200, "price": 3.75 },
+      { "label": "M", "volume": 300, "price": 4.5, "default": true },
+      { "label": "L", "volume": 400, "price": 5.25 }
+    ],
+    "additives": ["Sugar", "Cinnamon", "Syrup"],
+    "extra": true
+  },
+  {
+    "id": "latte",
+    "category": "coffee",
+    "title": "Latte",
+    "desc": "Espresso coffee with the addition of steamed milk and dense milk foam",
+    "image": "assets/images/latte.webp",
+    "unit": "ml",
+    "sizes": [
+      { "label": "S", "volume": 200, "price": 4.75 },
+      { "label": "M", "volume": 300, "price": 5.5, "default": true },
+      { "label": "L", "volume": 400, "price": 6.25 }
+    ],
+    "additives": ["Sugar", "Cinnamon", "Syrup"],
+    "extra": true
+  },
+  {
+    "id": "latte-macchiato",
+    "category": "coffee",
+    "title": "Latte macchiato",
+    "desc": "Espresso with frothed milk and chocolate",
+    "image": "assets/images/latte-macchiato.webp",
+    "unit": "ml",
+    "sizes": [
+      { "label": "S", "volume": 200, "price": 4.75 },
+      { "label": "M", "volume": 300, "price": 5.5, "default": true },
+      { "label": "L", "volume": 400, "price": 6.25 }
+    ],
+    "additives": ["Sugar", "Cinnamon", "Syrup"],
+    "extra": true
+  },
+  {
+    "id": "coffee-with-cognac",
+    "category": "coffee",
+    "title": "Coffee with cognac",
+    "desc": "Fragrant black coffee with cognac and whipped cream",
+    "image": "assets/images/coffee-with-cognac.webp",
+    "unit": "ml",
+    "sizes": [
+      { "label": "S", "volume": 200, "price": 5.5 },
+      { "label": "M", "volume": 300, "price": 6.5, "default": true },
+      { "label": "L", "volume": 400, "price": 7.5 }
+    ],
+    "additives": ["Sugar", "Cinnamon", "Syrup"],
+    "extra": true
+  },
+  {
+    "id": "moroccan",
+    "category": "tea",
+    "title": "Moroccan",
+    "desc": "Fragrant black tea with the addition of tangerine, cinnamon, honey, lemon and mint",
+    "image": "assets/images/moroccan-tea.webp",
+    "unit": "ml",
+    "sizes": [
+      { "label": "S", "volume": 200, "price": 3.75 },
+      { "label": "M", "volume": 300, "price": 4.5, "default": true },
+      { "label": "L", "volume": 400, "price": 5.25 }
+    ],
+    "additives": ["Sugar", "Lemon", "Syrup"]
+  },
+  {
+    "id": "ginger",
+    "category": "tea",
+    "title": "Ginger",
+    "desc": "Original black tea with fresh ginger, lemon and honey",
+    "image": "assets/images/ginger-tea.webp",
+    "unit": "ml",
+    "sizes": [
+      { "label": "S", "volume": 200, "price": 4.25 },
+      { "label": "M", "volume": 300, "price": 5.0, "default": true },
+      { "label": "L", "volume": 400, "price": 5.75 }
+    ],
+    "additives": ["Sugar", "Lemon", "Syrup"]
+  },
+  {
+    "id": "cranberry",
+    "category": "tea",
+    "title": "Cranberry",
+    "desc": "Invigorating black tea with cranberry and honey",
+    "image": "assets/images/cranberry-tea.webp",
+    "unit": "ml",
+    "sizes": [
+      { "label": "S", "volume": 200, "price": 4.25 },
+      { "label": "M", "volume": 300, "price": 5.0, "default": true },
+      { "label": "L", "volume": 400, "price": 5.75 }
+    ],
+    "additives": ["Sugar", "Lemon", "Syrup"]
+  },
+  {
+    "id": "sea-buckthorn",
+    "category": "tea",
+    "title": "Sea buckthorn",
+    "desc": "Toning sweet black tea with sea buckthorn, fresh thyme and cinnamon",
+    "image": "assets/images/sea-buckthorn-tea.webp",
+    "unit": "ml",
+    "sizes": [
+      { "label": "S", "volume": 200, "price": 4.75 },
+      { "label": "M", "volume": 300, "price": 5.5, "default": true },
+      { "label": "L", "volume": 400, "price": 6.25 }
+    ],
+    "additives": ["Sugar", "Lemon", "Syrup"]
+  },
+  {
+    "id": "marble-cheesecake",
+    "category": "dessert",
+    "title": "Marble cheesecake",
+    "desc": "Philadelphia cheese with lemon zest on a light sponge cake and red currant jam",
+    "image": "assets/images/marble-cheesecake.webp",
+    "unit": "g",
+    "sizes": [
+      { "label": "S", "volume": 50, "price": 3.0 },
+      { "label": "M", "volume": 100, "price": 3.5, "default": true },
+      { "label": "L", "volume": 200, "price": 4.0 }
+    ],
+    "additives": ["Berries", "Nuts", "Jam"]
+  },
+  {
+    "id": "red-velvet",
+    "category": "dessert",
+    "title": "Red velvet",
+    "desc": "Layer cake with cream cheese frosting",
+    "image": "assets/images/red-velvet.webp",
+    "unit": "g",
+    "sizes": [
+      { "label": "S", "volume": 50, "price": 3.5 },
+      { "label": "M", "volume": 100, "price": 4.0, "default": true },
+      { "label": "L", "volume": 200, "price": 4.5 }
+    ],
+    "additives": ["Berries", "Nuts", "Jam"]
+  },
+  {
+    "id": "cheesecakes",
+    "category": "dessert",
+    "title": "Cheesecakes",
+    "desc": "Soft cottage cheese pancakes with sour cream and fresh berries and sprinkled with powdered sugar",
+    "image": "assets/images/cheesecakes.webp",
+    "unit": "g",
+    "sizes": [
+      { "label": "S", "volume": 50, "price": 3.75 },
+      { "label": "M", "volume": 100, "price": 4.5, "default": true },
+      { "label": "L", "volume": 200, "price": 5.25 }
+    ],
+    "additives": ["Berries", "Nuts", "Jam"]
+  },
+  {
+    "id": "creme-brulee",
+    "category": "dessert",
+    "title": "Creme brulee",
+    "desc": "Delicate creamy dessert in a caramel basket with wild berries",
+    "image": "assets/images/creme-brulee.webp",
+    "unit": "g",
+    "sizes": [
+      { "label": "S", "volume": 50, "price": 3.5 },
+      { "label": "M", "volume": 100, "price": 4.0, "default": true },
+      { "label": "L", "volume": 200, "price": 4.5 }
+    ],
+    "additives": ["Berries", "Nuts", "Jam"]
+  },
+  {
+    "id": "pancakes",
+    "category": "dessert",
+    "title": "Pancakes",
+    "desc": "Tender pancakes with strawberry jam and fresh strawberries",
+    "image": "assets/images/pancakes.webp",
+    "unit": "g",
+    "sizes": [
+      { "label": "S", "volume": 50, "price": 3.75 },
+      { "label": "M", "volume": 100, "price": 4.5, "default": true },
+      { "label": "L", "volume": 200, "price": 5.25 }
+    ],
+    "additives": ["Berries", "Nuts", "Jam"],
+    "extra": true
+  },
+  {
+    "id": "honey-cake",
+    "category": "dessert",
+    "title": "Honey cake",
+    "desc": "Classic honey cake with delicate custard",
+    "image": "assets/images/honey-cake.webp",
+    "unit": "g",
+    "sizes": [
+      { "label": "S", "volume": 50, "price": 3.75 },
+      { "label": "M", "volume": 100, "price": 4.5, "default": true },
+      { "label": "L", "volume": 200, "price": 5.25 }
+    ],
+    "additives": ["Berries", "Nuts", "Jam"],
+    "extra": true
+  },
+  {
+    "id": "chocolate-cake",
+    "category": "dessert",
+    "title": "Chocolate cake",
+    "desc": "Cake with hot chocolate filling and nuts with dried apricots",
+    "image": "assets/images/chocolate-cake.webp",
+    "unit": "g",
+    "sizes": [
+      { "label": "S", "volume": 50, "price": 4.75 },
+      { "label": "M", "volume": 100, "price": 5.5, "default": true },
+      { "label": "L", "volume": 200, "price": 6.25 }
+    ],
+    "additives": ["Berries", "Nuts", "Jam"],
+    "extra": true
+  },
+  {
+    "id": "black-forest",
+    "category": "dessert",
+    "title": "Black forest",
+    "desc": "A combination of thin sponge cake with cherry jam and light chocolate mousse",
+    "image": "assets/images/black-forest.webp",
+    "unit": "g",
+    "sizes": [
+      { "label": "S", "volume": 50, "price": 5.5 },
+      { "label": "M", "volume": 100, "price": 6.5, "default": true },
+      { "label": "L", "volume": 200, "price": 7.5 }
+    ],
+    "additives": ["Berries", "Nuts", "Jam"],
+    "extra": true
+  }
+]
