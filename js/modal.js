@@ -1,3 +1,5 @@
+import { loadProducts, getDefaultSizeIndex, formatPrice } from "./products.js";
+
 document.addEventListener("DOMContentLoaded", () => {
   const modal = document.querySelector("[data-modal]");
   if (!modal) return;
@@ -11,41 +13,44 @@ document.addEventListener("DOMContentLoaded", () => {
   const totalEl = modal.querySelector("[data-modal-total]");
   const closeButtons = modal.querySelectorAll("[data-modal-close]");
 
-  const SIZE_LETTERS = ["S", "M", "L"];
-  const SIZE_MULTIPLIERS = [0.85, 1, 1.15];
   const ADDITIVE_PRICE = 0.3;
 
-  let basePrice = 0;
-  let sizePrices = [];
-  let activeSizeIndex = 1;
+  let productsById = new Map();
+  let sizes = [];
+  let activeSizeIndex = 0;
   let activeAdditives = new Set();
 
-  function roundToQuarter(value) {
-    return Math.round(value / 0.25) * 0.25;
-  }
+  // Load errors are already reported on the page by catalog.js.
+  loadProducts()
+    .then((products) => {
+      productsById = new Map(products.map((product) => [product.id, product]));
+    })
+    .catch(() => {});
 
-  function formatPrice(value) {
-    return `$${value.toFixed(2)}`;
+  function createChip(badgeText, labelText) {
+    const chip = document.createElement("button");
+    chip.type = "button";
+    chip.className = "chip";
+    const badge = document.createElement("span");
+    badge.className = "chip__badge";
+    badge.textContent = badgeText;
+    chip.append(badge, labelText);
+    return chip;
   }
 
   function updateTotal() {
     const total =
-      sizePrices[activeSizeIndex] + activeAdditives.size * ADDITIVE_PRICE;
+      sizes[activeSizeIndex].price + activeAdditives.size * ADDITIVE_PRICE;
     totalEl.textContent = formatPrice(total);
   }
 
-  function renderSizeChips(sizes, unit) {
-    sizesEl.innerHTML = "";
-    sizePrices = sizes.map((size, index) =>
-      index === 1 ? basePrice : roundToQuarter(basePrice * SIZE_MULTIPLIERS[index]),
-    );
+  function renderSizeChips(product) {
+    sizesEl.replaceChildren();
+    sizes = product.sizes;
 
     sizes.forEach((size, index) => {
-      const chip = document.createElement("button");
-      chip.type = "button";
-      chip.className = "chip";
+      const chip = createChip(size.label, `${size.volume} ${product.unit}`);
       chip.classList.toggle("is-active", index === activeSizeIndex);
-      chip.innerHTML = `<span class="chip__badge">${SIZE_LETTERS[index]}</span>${size} ${unit}`;
       chip.addEventListener("click", () => {
         activeSizeIndex = index;
         sizesEl
@@ -58,14 +63,11 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   function renderAdditiveChips(additives) {
-    additivesEl.innerHTML = "";
+    additivesEl.replaceChildren();
     activeAdditives = new Set();
 
     additives.forEach((additive, index) => {
-      const chip = document.createElement("button");
-      chip.type = "button";
-      chip.className = "chip";
-      chip.innerHTML = `<span class="chip__badge">${index + 1}</span>${additive}`;
+      const chip = createChip(String(index + 1), additive);
       chip.addEventListener("click", () => {
         if (activeAdditives.has(additive)) {
           activeAdditives.delete(additive);
@@ -79,17 +81,16 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  function openModal(card) {
-    basePrice = parseFloat(card.dataset.price);
-    activeSizeIndex = 1;
+  function openModal(product) {
+    activeSizeIndex = getDefaultSizeIndex(product);
 
-    imageEl.src = card.dataset.image;
-    imageEl.alt = card.dataset.title;
-    titleEl.textContent = card.dataset.title;
-    descEl.textContent = card.dataset.desc;
+    imageEl.src = product.image;
+    imageEl.alt = product.title;
+    titleEl.textContent = product.title;
+    descEl.textContent = product.desc;
 
-    renderSizeChips(card.dataset.sizes.split(","), card.dataset.unit);
-    renderAdditiveChips(card.dataset.additives.split(","));
+    renderSizeChips(product);
+    renderAdditiveChips(product.additives);
     updateTotal();
 
     modal.hidden = false;
@@ -102,14 +103,10 @@ document.addEventListener("DOMContentLoaded", () => {
     document.body.classList.remove("no-scroll");
   }
 
-  document.querySelectorAll("[data-modal-trigger]").forEach((button) => {
-    button.addEventListener("click", () => openModal(button));
-  });
-
-  document.querySelectorAll(".card").forEach((card) => {
-    const trigger = card.querySelector("[data-modal-trigger]");
-    if (!trigger) return;
-    card.addEventListener("click", () => openModal(trigger));
+  document.addEventListener("click", (event) => {
+    const card = event.target.closest(".card");
+    const product = card && productsById.get(card.dataset.id);
+    if (product) openModal(product);
   });
 
   closeButtons.forEach((button) => button.addEventListener("click", closeModal));
